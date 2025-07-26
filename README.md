@@ -6,7 +6,7 @@
 
 ## 🚀 Features
 
-- 🧭 Smooth scroll and anchor-based navigation
+- 🧭 Smooth scroll navigation
 - 📱 Fully responsive layout with mobile navigation menu
 - 🎨 Stylish UI using TailwindCSS
 - 🧑‍💻 Contact page for inquiries and coaching signups
