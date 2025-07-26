@@ -1,12 +1,32 @@
-# React + Vite
+# 🏋️‍♂️ CoachUp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**CoachUp** is a modern, responsive personal coaching website built with React and TailwindCSS. It features smooth navigation, a mobile-friendly layout, and clean design to showcase coaching services, reviews, and contact information.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🧭 Smooth scroll and anchor-based navigation
+- 📱 Fully responsive layout with mobile navigation menu
+- 🎨 Stylish UI using TailwindCSS
+- 🧑‍💻 Contact page for inquiries and coaching signups
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech Stack
+
+- React
+- Vite
+- React Router DOM
+- TailwindCSS
+- React Icons
+- React Router Hash Link
+
+---
+
+### ScreenShot
+![CoachUp](public/images/CoachUp.png)
+
+**Live at**  https://coachup-three.vercel.app/
+
+
