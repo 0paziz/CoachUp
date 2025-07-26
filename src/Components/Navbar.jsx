@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navitems = [
@@ -15,12 +15,12 @@ export default function Navbar() {
   const toggleMenu = () => setMobileOpen(!mobileOpen);
 
   return (
-    <header className="w-full px-6 py-4 transition ease-out bg-transparent z-50">
+    <header className="w-full px-6 py-4 transition ease-out bg-transparent relative z-50">
       <nav className="flex items-center justify-between max-w-6xl mx-auto text-white relative">
         <div className="flex items-center space-x-2">
-          <Link to="/#hero" className="hover:text-gray-300 transition text-white text-xl font-semibold cursor-pointer">
+          <HashLink to="/#hero" smooth className="hover:text-gray-300 transition text-white text-xl font-semibold cursor-pointer">
             CoachUp
-          </Link>
+          </HashLink>
 
           <div className="ml-4 border-l-2 border-[#a0a0a0] h-6"></div>
 
@@ -28,21 +28,21 @@ export default function Navbar() {
           <ul className="hidden lg:flex space-x-8 ml-5">
             {Navitems.map((item) => (
               <li key={item.id}>
-                <a
-                  href={item.href}
+                <HashLink
+                  smooth
+                  to={item.href}
                   className="relative group transition-colors duration-200"
                 >
                   {item.label}
                   <span className="absolute left-0 -bottom-1.5 w-0 h-0.5 bg-white transition-all duration-500 group-hover:w-full"></span>
-                </a>
+                </HashLink>
               </li>
             ))}
             <li>
-              <Link className="relative group transition-colors duration-200" to="/contact">
-              Contact
-             <span className="absolute left-0 -bottom-1.5 w-0 h-0.5 bg-white transition-all duration-500 group-hover:w-full"></span>
-              </Link>
-             
+              <RouterLink className="relative group transition-colors duration-200" to="/contact">
+                Contact
+                <span className="absolute left-0 -bottom-1.5 w-0 h-0.5 bg-white transition-all duration-500 group-hover:w-full"></span>
+              </RouterLink>
             </li>
           </ul>
         </div>
@@ -59,7 +59,7 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <button className="hidden lg:inline backdrop-blur-sm font-semibold bg-white/10 text-white px-8 py-2 rounded-full hover:bg-white/20 transition-all duration-300 cursor-pointer">
-            <a href='#coaching'>View Plans </a>
+            <HashLink smooth to="/#coaching">View Plans</HashLink>
           </button>
         </div>
 
@@ -68,24 +68,24 @@ export default function Navbar() {
           <ul className="absolute top-full left-0 w-full bg-[#0d0d0d] flex flex-col items-center lg:hidden py-6 gap-6 transition-all duration-300 z-40">
             {Navitems.map((item) => (
               <li key={item.id}>
-                <a
-                  href={item.href}
+                <HashLink
+                  smooth
+                  to={item.href}
                   onClick={() => setMobileOpen(false)}
                   className="text-white text-lg hover:text-gray-300 transition"
                 >
                   {item.label}
-                </a>
+                </HashLink>
               </li>
             ))}
-             <li>
-              <Link   className="relative group transition-colors duration-200" to="/contact">
-              Contact
-             <span className="absolute left-0 -bottom-1.5 w-0 h-0.5 bg-white transition-all duration-500 group-hover:w-full"></span>
-              </Link>
-             
+            <li>
+              <RouterLink className="relative group transition-colors duration-200" to="/contact" onClick={() => setMobileOpen(false)}>
+                Contact
+                <span className="absolute left-0 -bottom-1.5 w-0 h-0.5 bg-white transition-all duration-500 group-hover:w-full"></span>
+              </RouterLink>
             </li>
             <button className="mt-4 backdrop-blur-sm font-semibold bg-white/10 text-white px-6 py-2 rounded-full hover:bg-white/20 transition-all duration-300">
-              <a href='#coaching'>View Plans </a>
+              <HashLink smooth to="/#coaching" onClick={() => setMobileOpen(false)}>View Plans</HashLink>
             </button>
           </ul>
         )}

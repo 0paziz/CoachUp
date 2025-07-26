@@ -27,7 +27,7 @@ export default function Hero() {
         </p>
 
         <Link to="/contact">
-          <button className="group inline-flex items-center mt-4 gap-2 w-fit px-6 py-3 rounded-full bg-white text-black font-semibold hover:bg-opacity-90 transition-all">
+          <button className="group inline-flex cursor-pointer items-center mt-4 gap-2 w-fit px-6 py-3 rounded-full bg-white text-black font-semibold hover:bg-opacity-90 transition-all">
             Start Now
             <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
           </button>
